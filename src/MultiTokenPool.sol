@@ -127,25 +127,25 @@ contract MultiTokenPool {
 
         return unwrap(amountIn);
     }
-    function depositSingleAsset(uint tokenId, uint _amount) public returns(uint) {
-        Token memory token = idToToken[tokenId];
-        UD60x18 amount = ud(_amount);
-        UD60x18 weight = token.weight;
-        UD60x18 balance = token.balance;
+    // function depositSingleAsset(uint tokenId, uint _amount) public returns(uint) {
+    //     Token memory token = idToToken[tokenId];
+    //     UD60x18 amount = ud(_amount);
+    //     UD60x18 weight = token.weight;
+    //     UD60x18 balance = token.balance;
 
 
-        // poolShares = shareSupply ((1+ (depositAmount / balance))** weight     -1 )
-        UD60x18 powerStuff = div(amount.pow(weight) / balance.pow()) ;
+    //     // poolShares = shareSupply ((1+ (depositAmount / balance))** weight     -1 )
+    //     UD60x18 powerStuff = div(amount.pow(weight) / balance.pow()) ;
         
-        UD60x18 innerFraction = add(UNIT, div(amount,balance));
-        UD60x18 powerStuff = sub(innerFraction.pow(weight), UNIT);
+    //     UD60x18 innerFraction = add(UNIT, div(amount,balance));
+    //     UD60x18 powerStuff = sub(innerFraction.pow(weight), UNIT);
         
-        UD60x18 result = 
+    //     UD60x18 result = 
 
 
 
 
-    }
+    // }
 
 
 }
