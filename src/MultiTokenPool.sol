@@ -18,8 +18,8 @@ contract MultiTokenPool {
     constructor() {
         idToToken[1] = Token(.15 ether, 20000 ether, address(0));
         idToToken[2] = Token(.2 ether, 20000 ether, address(0));
-        // idToToken[3] = Token(.15 ether, 50 ether, address(0));
-        // idToToken[4] = Token(.5 ether, 80 ether, address(0));
+        idToToken[3] = Token(.15 ether, 50 ether, address(0));
+        idToToken[4] = Token(.5 ether, 80 ether, address(0));
         numTokens = 4;
     }
 
